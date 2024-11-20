@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: argocd-app-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: argocd-app
   ports:
     - protocol: TCP
       port: 8888
       targetPort: 8888
-      nodePort: 30888
