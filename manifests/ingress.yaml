@@ -4,15 +4,15 @@ kind: Ingress
 metadata:
   name: argocd-app-ingress
   annotations:
-    ingress.kubernetes.io/ssl-redirect: "false"
+    ingress.kubernetes.io/ssl-redirect: 'false'
 spec:
   rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: argocd-app-service
-            port:
-              number: 8888
+    - http:
+        paths:
+          - path: /argocd-app
+            pathType: Prefix
+            backend:
+              service:
+                name: argocd-app-service
+                port:
+                  number: 8888
