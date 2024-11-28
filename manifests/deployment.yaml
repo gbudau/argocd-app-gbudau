@@ -19,9 +19,9 @@ spec:
           image: mendhak/http-https-echo:35
           env:
             - name: HTTP_PORT
-              value: 8888
+              value: '8888'
             - name: HTTPS_PORT
-              value: 8443
+              value: '8444'
           ports:
             - containerPort: 8888
             - containerPort: 8443
