@@ -9,7 +9,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /argocd-app
+      - path: /
         pathType: Prefix
         backend:
           service:
