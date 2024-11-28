@@ -16,6 +16,12 @@ spec:
     spec:
       containers:
         - name: argocd-app
-          image: wil42/playground:v1
+          image: mendhak/http-https-echo:35
+              env:
+              - name: HTTP_PORT
+                value: 8888
+              - name: HTTPS_PORT
+                value: 8443
           ports:
             - containerPort: 8888
+            - containerPort: 8443
