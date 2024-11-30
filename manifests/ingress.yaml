@@ -4,7 +4,6 @@ metadata:
   name: argocd-app-ingress
   annotations:
     ingress.kubernetes.io/ssl-redirect: 'false'
-    traefik.ingress.kubernetes.io/router.middlewares: default-argocd-app-strip-prefix@kubernetescrd
 spec:
   rules:
     - http:
@@ -16,13 +15,3 @@ spec:
                 name: argocd-app-service
                 port:
                   number: 80
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: default-argocd-app-strip-prefix
-  namespace: default
-spec:
-  stripPrefix:
-    prefixes:
-      - "/argocd-app"
