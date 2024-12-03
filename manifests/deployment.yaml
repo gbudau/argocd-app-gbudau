@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: argocd-app
-          image: mendhak/http-https-echo:33
+          image: mendhak/http-https-echo:34
           env:
             - name: HTTP_PORT
               value: '8888'
